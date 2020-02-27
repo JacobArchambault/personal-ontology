@@ -21,6 +21,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_55d61fed_3a2b_4fe8_9c1d_0f0fe60575eb -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_55d61fed_3a2b_4fe8_9c1d_0f0fe60575eb">
+        <rdfs:label xml:lang="en">Aline_Archambault</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_a169cd7c_f09f_4eb8_9ed7_8ae53825a2b9 -->
 
     <owl:Thing rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_a169cd7c_f09f_4eb8_9ed7_8ae53825a2b9">
