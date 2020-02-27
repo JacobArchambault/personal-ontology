@@ -22,10 +22,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_2e42349f_6120_4a98_ac49_80fad2b47ae8 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_2e42349f_6120_4a98_ac49_80fad2b47ae8">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_5ee37240_66c1_42a5_a9ee_c0c3a7ef70c5"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLClass_004a1ae3_b618_4713_80da_60955d9d93e0"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLClass_004a1ae3_b618_4713_80da_60955d9d93e0"/>
+        <rdfs:label xml:lang="en">isChildOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_5ee37240_66c1_42a5_a9ee_c0c3a7ef70c5 -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_5ee37240_66c1_42a5_a9ee_c0c3a7ef70c5">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLClass_004a1ae3_b618_4713_80da_60955d9d93e0"/>
@@ -81,6 +93,24 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLClass_004a1ae3_b618_4713_80da_60955d9d93e0"/>
         <rdfs:label xml:lang="en">Jacob_Archambault</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_55d61fed_3a2b_4fe8_9c1d_0f0fe60575eb"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_a169cd7c_f09f_4eb8_9ed7_8ae53825a2b9"/>
+        </owl:distinctMembers>
+    </rdf:Description>
 </rdf:RDF>
 
 
