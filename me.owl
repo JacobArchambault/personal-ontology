@@ -1,12 +1,36 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/jacobarchambault/ontologies/me/"
      xml:base="http://www.semanticweb.org/jacobarchambault/ontologies/me/"
+     xmlns:me="http://www.semanticweb.org/jacobarchambault/ontologies/me#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_5f508efc_9df9_4919_8117_9d7f3a1b3f67 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_5f508efc_9df9_4919_8117_9d7f3a1b3f67">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">isMotherOf</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -24,6 +48,7 @@
     <!-- http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_55d61fed_3a2b_4fe8_9c1d_0f0fe60575eb -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_55d61fed_3a2b_4fe8_9c1d_0f0fe60575eb">
+        <me:OWLObjectProperty_5f508efc_9df9_4919_8117_9d7f3a1b3f67 rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_a169cd7c_f09f_4eb8_9ed7_8ae53825a2b9"/>
         <rdfs:label xml:lang="en">Aline_Archambault</rdfs:label>
     </owl:NamedIndividual>
     
