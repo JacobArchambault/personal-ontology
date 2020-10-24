@@ -65,6 +65,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_a168454d_9427_423d_af37_42b6139dff61">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_2e42349f_6120_4a98_ac49_80fad2b47ae8"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_052d019d_b290_4d35_ab66_cdf429fbad29"/>
@@ -98,6 +100,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_fc4ff85d_0888_4d6b_b51d_d6465d4a0ddb">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_ba741f87_9812_4e8a_bac9_d5390f2afc2f"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_5ee37240_66c1_42a5_a9ee_c0c3a7ef70c5"/>
