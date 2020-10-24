@@ -61,6 +61,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_6883c6f2_0c7e_4e8a_aab3_0398b0b97c0f -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_6883c6f2_0c7e_4e8a_aab3_0398b0b97c0f">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_2e42349f_6120_4a98_ac49_80fad2b47ae8"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_052d019d_b290_4d35_ab66_cdf429fbad29"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_dc612fc2_d612_4b3d_befb_49634311e8dc"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_a168454d_9427_423d_af37_42b6139dff61"/>
+        <rdfs:label xml:lang="en">isDaughterOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_a168454d_9427_423d_af37_42b6139dff61 -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_a168454d_9427_423d_af37_42b6139dff61">
@@ -197,8 +215,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_55d61fed_3a2b_4fe8_9c1d_0f0fe60575eb">
         <rdf:type rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLClass_004a1ae3_b618_4713_80da_60955d9d93e0"/>
-        <me:OWLObjectProperty_052d019d_b290_4d35_ab66_cdf429fbad29 rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_dc612fc2_d612_4b3d_befb_49634311e8dc"/>
-        <me:OWLObjectProperty_5ee37240_66c1_42a5_a9ee_c0c3a7ef70c5 rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_a169cd7c_f09f_4eb8_9ed7_8ae53825a2b9"/>
+        <me:OWLObjectProperty_6883c6f2_0c7e_4e8a_aab3_0398b0b97c0f rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_dd795d76_6c0f_430b_9ec2_982760ac86b6"/>
+        <me:OWLObjectProperty_ba741f87_9812_4e8a_bac9_d5390f2afc2f rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_a169cd7c_f09f_4eb8_9ed7_8ae53825a2b9"/>
         <rdfs:label xml:lang="en">Aline_Archambault</rdfs:label>
     </owl:NamedIndividual>
     
