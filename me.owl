@@ -79,6 +79,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_799e4684_5a93_4d51_bc3f_9c26a043fa8b -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_799e4684_5a93_4d51_bc3f_9c26a043fa8b">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:label xml:lang="en">isSpouseOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_a168454d_9427_423d_af37_42b6139dff61 -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_a168454d_9427_423d_af37_42b6139dff61">
@@ -92,6 +102,21 @@
             </owl:Restriction>
         </rdfs:domain>
         <rdfs:label xml:lang="en">isSonOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_b1b504b7_020d_4147_a103_f2c5725b02c9 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_b1b504b7_020d_4147_a103_f2c5725b02c9">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_5ee37240_66c1_42a5_a9ee_c0c3a7ef70c5"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_5ee37240_66c1_42a5_a9ee_c0c3a7ef70c5"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">isGrandparentOf</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -133,10 +158,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_e6dc497e_c832_4b10_8a4b_3ce2b318abba -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_e6dc497e_c832_4b10_8a4b_3ce2b318abba">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_b1b504b7_020d_4147_a103_f2c5725b02c9"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_fc4ff85d_0888_4d6b_b51d_d6465d4a0ddb"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_e1db6dea_6a97_4bc8_83ca_d12f223fea9b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_5ee37240_66c1_42a5_a9ee_c0c3a7ef70c5"/>
+        </owl:propertyChainAxiom>
+        <rdfs:label xml:lang="en">isGrandfatherOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_fc4ff85d_0888_4d6b_b51d_d6465d4a0ddb -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_fc4ff85d_0888_4d6b_b51d_d6465d4a0ddb">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLObjectProperty_b1b504b7_020d_4147_a103_f2c5725b02c9"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
@@ -255,6 +294,8 @@
     <!-- http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_afec0495_d870_406c_a609_a861aad17cf1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_afec0495_d870_406c_a609_a861aad17cf1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLClass_004a1ae3_b618_4713_80da_60955d9d93e0"/>
+        <me:OWLObjectProperty_799e4684_5a93_4d51_bc3f_9c26a043fa8b rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_55d61fed_3a2b_4fe8_9c1d_0f0fe60575eb"/>
         <me:OWLObjectProperty_e1db6dea_6a97_4bc8_83ca_d12f223fea9b rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_a169cd7c_f09f_4eb8_9ed7_8ae53825a2b9"/>
         <rdfs:label xml:lang="en">Gerald_Renaud</rdfs:label>
     </owl:NamedIndividual>
@@ -273,6 +314,7 @@
     <!-- http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_dd795d76_6c0f_430b_9ec2_982760ac86b6 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_dd795d76_6c0f_430b_9ec2_982760ac86b6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLClass_004a1ae3_b618_4713_80da_60955d9d93e0"/>
         <me:OWLObjectProperty_ba741f87_9812_4e8a_bac9_d5390f2afc2f rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/me#OWLNamedIndividual_55d61fed_3a2b_4fe8_9c1d_0f0fe60575eb"/>
         <rdfs:label xml:lang="en">Vivian_Archambault</rdfs:label>
     </owl:NamedIndividual>
