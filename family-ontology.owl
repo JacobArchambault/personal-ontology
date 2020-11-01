@@ -765,6 +765,12 @@
     <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#BrotherInLaw -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#BrotherInLaw">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isBrotherInLawOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Human"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#SiblingInLaw"/>
     </owl:Class>
     
@@ -1410,9 +1416,27 @@
     
 
 
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#John_DeMarco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#John_DeMarco">
+        <family-ontology:isFatherOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Amanda_Archambault"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Matthew_DeMarco -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Matthew_DeMarco"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Wendy_DeMarco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Wendy_DeMarco">
+        <family-ontology:hasHusband rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#John_DeMarco"/>
+        <family-ontology:isMotherOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Amanda_Archambault"/>
+        <family-ontology:isWifeOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#John_DeMarco"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1702,6 +1726,20 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Restriction>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Aline_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Amanda_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Dylan_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Gerald_Renaud"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Jacob_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#John_DeMarco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Matthew_DeMarco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#female"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#male"/>
+        </owl:distinctMembers>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
