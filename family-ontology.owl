@@ -68,6 +68,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#hasBrotherInLaw -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#hasBrotherInLaw">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSiblingInLawOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isBrotherInLawOf"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#hasDaughterInLaw -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#hasDaughterInLaw">
@@ -195,6 +204,25 @@
     
 
 
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#hasSister -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#hasSister">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSiblingOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSisterOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#hasSisterInLaw -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#hasSisterInLaw">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSiblingInLawOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSisterInLawOf"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#hasSon -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#hasSon">
@@ -246,6 +274,22 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#hasWife">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSpouseOf"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isWifeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isBrotherInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isBrotherInLawOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSiblingInLawOf"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isBrotherOf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSpouseOf"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isHusbandOf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSiblingOf"/>
+        </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
 
@@ -501,6 +545,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSiblingInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSiblingInLawOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSiblingOf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSpouseOf"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSpouseOf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSiblingOf"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSiblingOf -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSiblingOf">
@@ -523,6 +583,33 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Gender"/>
             </owl:Restriction>
         </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSisterInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSisterInLawOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSiblingInLawOf"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSisterOf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSpouseOf"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isWifeOf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSiblingOf"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSisterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSisterOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSiblingOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Woman"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Human"/>
     </owl:ObjectProperty>
     
 
@@ -645,6 +732,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Animal"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Human"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Man"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Sibling"/>
         <rdfs:subClassOf>
@@ -670,6 +758,14 @@
                 <owl:hasValue rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#male"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#BrotherInLaw -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#BrotherInLaw">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#SiblingInLaw"/>
     </owl:Class>
     
 
@@ -738,6 +834,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Human"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Human"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Man"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Parent"/>
         <rdfs:subClassOf>
@@ -862,6 +959,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Human"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Human"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Parent"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Woman"/>
         <rdfs:subClassOf>
@@ -937,6 +1035,34 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Human"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#SiblingInLaw -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#SiblingInLaw">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSiblingInLawOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Human"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Human"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#SisterInLaw -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#SisterInLaw">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#isSisterInLawOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Human"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#SiblingInLaw"/>
     </owl:Class>
     
 
@@ -1124,7 +1250,10 @@
 
     <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Amanda_Archambault -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Amanda_Archambault"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Amanda_Archambault">
+        <family-ontology:hasBrother rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Matthew_DeMarco"/>
+        <family-ontology:isSisterOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Matthew_DeMarco"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1278,6 +1407,12 @@
         <family-ontology:isSonOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Aline_Archambault"/>
         <family-ontology:isSonOf rdf:resource="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Gerald_Renaud"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Matthew_DeMarco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Matthew_DeMarco"/>
     
 
 
@@ -1567,6 +1702,19 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Restriction>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Aline_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Amanda_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Dylan_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Gerald_Renaud"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Jacob_Archambault"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#Matthew_DeMarco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#female"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jacobarchambault/ontologies/2020/9/family-ontology#male"/>
+        </owl:distinctMembers>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
